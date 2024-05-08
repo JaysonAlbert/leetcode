@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+
+import java.util.LinkedList;
+
 class CQueue {
 
    LinkedList<Integer> a,b;

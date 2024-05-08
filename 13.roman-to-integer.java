@@ -10,6 +10,10 @@
 
 // @lcpr-template-end
 // @lc code=start
+
+import java.util.HashMap;
+import java.util.Map;
+
 class Solution {
 
     static Map<Character, Integer> map = new HashMap<>();

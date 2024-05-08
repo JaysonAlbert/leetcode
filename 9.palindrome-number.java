@@ -10,6 +10,9 @@
 
 // @lcpr-template-end
 // @lc code=start
+
+import java.util.LinkedList;
+
 class Solution {
     public boolean isPalindrome(int x) {
         if(x < 0){
