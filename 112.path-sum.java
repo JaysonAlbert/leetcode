@@ -27,37 +27,16 @@
  */
 class Solution {
 
-    private boolean has = false;
-    private int sum = 0;
-    private int target;
-
     public boolean hasPathSum(TreeNode root, int targetSum) {
-        this.target = targetSum;
         if(root == null ){
             return false;
         }
 
-        traverse(root);
-        return has;
-    }
-
-    public void traverse(TreeNode root){
-        if(has){
-            return;
-        }
-        sum += root.val;
-        if(root.left == null && root.right == null && target == sum){
-            has = true;
-            return;
-        }
-        if(root.left != null){
-            traverse(root.left);
+        if(root.left == null && root.right == null && root.val == targetSum){
+            return true;
         }
 
-        if(root.right != null){
-            traverse(root.right);
-        }
-        sum -= root.val;
+        return hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.val);
     }
 }
 // @lc code=end
